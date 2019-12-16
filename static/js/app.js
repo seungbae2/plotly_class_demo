@@ -10,8 +10,11 @@ d3.json("samples.json").then(function(data){
     samples = data.samples;
     metaData = data.metadata;
 
-
+    const firstSample = names[0];
+    console.log(firstSample) 
+    optionChanged(firstSample); 
 });
+
 
 function optionChanged(id){
     var selectData = samples.filter(data => data.id === id);
